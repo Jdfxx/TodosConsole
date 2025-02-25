@@ -2,7 +2,7 @@
 
 namespace TodoList;
 
-internal class Program
+public class Program
 {
     public static void Main(string[] args)
     {
@@ -25,7 +25,7 @@ internal class Program
         }
     }
 
-    private static void AddTodo(ArrayList todos)
+    public static void AddTodo(ArrayList todos)
     {
         Console.Clear();
         Console.WriteLine("Please type in a new TODO: \n");
@@ -36,7 +36,7 @@ internal class Program
         PressToContinue();
     }
 
-    private static void ShowAll(ArrayList todos)
+    public static void ShowAll(ArrayList todos)
     {
         Console.Clear();
         var counter = 1;
@@ -49,20 +49,20 @@ internal class Program
         PressToContinue();
     }
 
-    private static void PressToContinue()
+    public static void PressToContinue()
     {
         Console.WriteLine("\n Press any key to continue!");
         Console.ReadKey();
     }
 
-    private static void Exit()
+    public static void Exit()
     {
         Console.Clear();
         Console.WriteLine("Byeeee");
         Environment.Exit(0);
     }
 
-    private static void ShowMenu()
+    public static void ShowMenu()
     {
         Console.Clear();
         Console.WriteLine("What would you like to do!");
