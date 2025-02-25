@@ -4,7 +4,7 @@ namespace TodoList;
 
 public class Todos
 {
-    public void Run()
+    public static void Run()
     {
         Console.WriteLine("Hello!");
 
@@ -25,7 +25,7 @@ public class Todos
         }
     }
 
-    public void AddTodo(ArrayList todos)
+    private static void AddTodo(ArrayList todos)
     {
         Console.Clear();
         Console.WriteLine("Please type in a new TODO: \n");
@@ -36,7 +36,7 @@ public class Todos
         PressToContinue();
     }
 
-    public void ShowAll(ArrayList todos)
+    private static void ShowAll(ArrayList todos)
     {
         Console.Clear();
         var counter = 1;
@@ -49,20 +49,20 @@ public class Todos
         PressToContinue();
     }
 
-    public void PressToContinue()
+    private static void PressToContinue()
     {
         Console.WriteLine("\n Press any key to continue!");
         Console.ReadKey();
     }
 
-    public void Exit()
+    private static void Exit()
     {
         Console.Clear();
         Console.WriteLine("Byeeee");
         Environment.Exit(0);
     }
 
-    public void ShowMenu()
+    private static void ShowMenu()
     {
         Console.Clear();
         Console.WriteLine("What would you like to do!");
