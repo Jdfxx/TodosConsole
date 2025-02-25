@@ -1,6 +1,5 @@
 ﻿using JetBrains.Annotations;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TodoList;
 
 namespace TodoList.Tests;
 
