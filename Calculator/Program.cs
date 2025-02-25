@@ -13,7 +13,7 @@ Console.WriteLine("[S]ubtract");
 Console.WriteLine("[D]ivide");
 Console.WriteLine("[M]multiply");
 
-var input = Console.ReadLine().ToUpper();
+var input = Console.ReadLine()?.ToUpper();
 
 switch (input)
 {
