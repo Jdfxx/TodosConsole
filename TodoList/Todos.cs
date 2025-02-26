@@ -1,6 +1,4 @@
-﻿using System.Collections;
-
-namespace TodoList;
+﻿namespace TodoList;
 
 public class Todos
 {
@@ -8,7 +6,7 @@ public class Todos
     {
         Console.WriteLine("Hello!");
 
-        var todos = new ArrayList();
+        List<string> todos = [];
 
         while (true)
         {
@@ -18,14 +16,35 @@ public class Todos
             switch (input)
             {
                 case "E": Exit(); break;
-                case "V": ShowAll(todos); break;
+                case "V": ShowAll(todos);  break;
                 case "A": AddTodo(todos); break;
+                case "D": Delete(todos); break;
                 default: ShowMenu(); break;
             }
         }
     }
 
-    private static void AddTodo(ArrayList todos)
+    private static void Delete(List<string> todos)
+    {
+        Console.Clear();
+
+        todos.ForEach(todo =>
+        {
+            var indexOf = todos.IndexOf(todo);
+            Console.WriteLine($"{indexOf+1}. {todo}");
+        });
+        Console.WriteLine("Which TODO would you like to delete: ");
+        Console.WriteLine("Please enter a number: ");
+        var input = int.Parse(Console.ReadLine() ?? throw new InvalidOperationException());
+        
+        todos.RemoveAt(input-1);
+
+        Console.WriteLine("Deleting todo..");
+        Console.WriteLine("Done!");
+        PressToContinue();
+    }
+
+    private static void AddTodo(List<string> todos)
     {
         Console.Clear();
         Console.WriteLine("Please type in a new TODO: \n");
@@ -33,10 +52,11 @@ public class Todos
         var todo = Console.ReadLine();
 
         todos.Add(todo);
+        Console.WriteLine("Todo added");
         PressToContinue();
     }
 
-    private static void ShowAll(ArrayList todos)
+    private static void ShowAll(List<string> todos)
     {
         Console.Clear();
         var counter = 1;
@@ -45,8 +65,8 @@ public class Todos
         else
             foreach (var todo in todos)
                 Console.WriteLine(counter++ + ". " + todo);
-
         PressToContinue();
+        
     }
 
     private static void PressToContinue()
