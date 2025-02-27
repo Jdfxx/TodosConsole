@@ -18,3 +18,18 @@ lengths.ForEach(Console.WriteLine);
 names.Where(name => name.All(char.IsUpper))
     .Where(name => name.All(char.IsLetter))
     .Distinct().ToList().ForEach(Console.WriteLine);
+    
+    var pizzaDay = new DateTime(2023, 2, 9);
+
+    Console.WriteLine($"Year is {pizzaDay.Year}");
+    Console.WriteLine($"Month is {pizzaDay.Month}");
+    Console.WriteLine($"Day is {pizzaDay.Day}");
+    Console.WriteLine($"Day of the week is {pizzaDay.DayOfWeek}");
+    
+    pizzaDay = pizzaDay.AddYears(1);
+
+    Console.WriteLine($"Year is {pizzaDay.Year}");
+    Console.WriteLine($"Month is {pizzaDay.Month}");
+    Console.WriteLine($"Day is {pizzaDay.Day}");
+    Console.WriteLine($"Day of the week is {pizzaDay.DayOfWeek}");
+    

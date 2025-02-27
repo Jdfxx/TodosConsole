@@ -4,8 +4,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace TodoList.Tests;
 
 [TestClass]
-[TestSubject(typeof(Todos))]
-public class TodosTest
+[TestSubject(typeof(TodosConsole))]
+public class TodosConsoleTest
 {
 
     [TestMethod]
