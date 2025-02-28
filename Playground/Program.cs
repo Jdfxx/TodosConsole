@@ -9,6 +9,8 @@
 //     Console.WriteLine(number);
 // }
 
+using Playground;
+
 List<string> names = ["Filip", "Monika", "laura", "FILIP12", "FILIP123!", "FILI"];
 
 var lengths = names.Select(name => name.Length).ToList();
@@ -32,4 +34,13 @@ names.Where(name => name.All(char.IsUpper))
     Console.WriteLine($"Month is {pizzaDay.Month}");
     Console.WriteLine($"Day is {pizzaDay.Day}");
     Console.WriteLine($"Day of the week is {pizzaDay.DayOfWeek}");
+    
+    
+    var rectangle = new Rectangle(4,5);
+
+    Console.WriteLine(rectangle);
+
+    var booking = new HotelBooking("Filip" , DateTime.Now, 20);
+
+    Console.WriteLine(booking.GuestName);
     
