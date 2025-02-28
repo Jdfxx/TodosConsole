@@ -13,15 +13,9 @@ public class Rectangle
         _length = length;
     }
     
-    public int CalculateArea()
-    {
-        return _length * _width;
-    }
+    public int CalculateArea() =>_length * _width;
 
-    public int CalculateCircumference()
-    {
-        return 2 * _length + _width;
-    }
+    public int CalculateCircumference() => 2 * _length + 2 * _width;
 
     public override string ToString()
     {
