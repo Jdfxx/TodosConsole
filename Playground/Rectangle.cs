@@ -1,4 +1,6 @@
-﻿namespace Playground;
+﻿using System.Formats.Asn1;
+
+namespace Playground;
 
 public class Rectangle
 {
@@ -10,7 +12,16 @@ public class Rectangle
         _width = width;
         _length = length;
     }
+    
+    public int CalculateArea()
+    {
+        return _length * _width;
+    }
 
+    public int CalculateCircumference()
+    {
+        return 2 * _length + _width;
+    }
 
     public override string ToString()
     {
