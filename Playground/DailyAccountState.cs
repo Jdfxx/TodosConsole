@@ -14,10 +14,10 @@ public class DailyAccountState
         SumOfOperations = sumOfOperations;
     }
         
-    public int EndOfDateState() => InitialState + SumOfOperations;
+    public int EndOfDayState => InitialState + SumOfOperations;
        
        
     public string Report() => $"Day: {DateTime.Now.Day}, month: {DateTime.Now.Month}," +
-                              $" year: {DateTime.Now.Year}, initial state: {InitialState}, end of day state: {EndOfDateState()}";
+                              $" year: {DateTime.Now.Year}, initial state: {InitialState}, end of day state: {EndOfDayState}";
        
 }
